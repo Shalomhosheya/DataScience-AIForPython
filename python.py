@@ -1,13 +1,25 @@
-print("hello world!")
+import requests
+response = requests.get('https://api.github.com/events')
 
-my_tuple_1=(20,"cat",10) #have comma 
-my_list_4=list(my_tuple_1)
-my_list_4[1]="rat"
-my_tuple_1=tuple(my_list_4)
-print(my_tuple_1)
-print(type(my_tuple_1))
+print(response)
+print("\n",response.status_code,"\n")
+if response.status_code == 200:
+    print("success","\n")
+    print(response.headers,"\n")
+    print(response.headers['content-type'])
+    print("\n",response.text)
 
 
+
+
+# print("hello world!")
+
+# my_tuple_1=(20,"cat",10) #have comma 
+# my_list_4=list(my_tuple_1)
+# my_list_4[1]="rat"
+# my_tuple_1=tuple(my_list_4)
+# print(my_tuple_1)
+# print(type(my_tuple_1))
 
 # my_list = [10,20,'dog',True,45]
 # my_list_2 = my_list.copy()
@@ -63,54 +75,54 @@ print(type(my_tuple_1))
 # print(dict_1["weight"])
 # print(len(dict_1))
 
-dict_1 ={
-"name":"sugar",
-"weight":"1kg",
-"price":100
-}
+# dict_1 ={
+# "name":"sugar",
+# "weight":"1kg",
+# "price":100
+# }
 
-print(dict_1,type(dict_1))
-print(dict_1["weight"])
-print(len(dict_1))
+# print(dict_1,type(dict_1))
+# print(dict_1["weight"])
+# print(len(dict_1))
 
-dict_1.update({"weight":"2kg","price":270.50})
-print(dict_1,type(dict_1))
+# dict_1.update({"weight":"2kg","price":270.50})
+# print(dict_1,type(dict_1))
 
-dict_1["color"]="white"
-print(dict_1,"lenght:",len(dict_1))
+# dict_1["color"]="white"
+# print(dict_1,"lenght:",len(dict_1))
 
-dict_1.pop("weight")#remove the 
-print(dict_1)
-
-dict_1.popitem()#final class will be 
-print(dict_1)
-
-dict_2 =dict_1.copy()#copy is used to copy the dict
-dict_1["name"]="pol"
-print(dict_1)
-print(dict_2)
-print()
-print(dict_2.keys())
-
-x=50
-y=7
-
-print(x//y)#ignores the decimal
-print(x%y)#ignores the decimal
-
-x=5
-print(x==5)
-
-x=input("enter value:")
-print(x)
-
-
-
-# del dict_1["price"]#another method to delete the code
+# dict_1.pop("weight")#remove the 
 # print(dict_1)
 
+# dict_1.popitem()#final class will be 
+# print(dict_1)
 
-x=1000
-y=1000
+# dict_2 =dict_1.copy()#copy is used to copy the dict
+# dict_1["name"]="pol"
+# print(dict_1)
+# print(dict_2)
+# print()
+# print(dict_2.keys())
 
-print(x is y)
+# x=50
+# y=7
+
+# print(x//y)#ignores the decimal
+# print(x%y)#ignores the decimal
+
+# x=5
+# print(x==5)
+
+# x=input("enter value:")
+# print(x)
+
+
+
+# # del dict_1["price"]#another method to delete the code
+# # print(dict_1)
+
+
+# x=1000
+# y=1000
+
+# print(x is y)
