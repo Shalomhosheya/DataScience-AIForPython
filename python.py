@@ -1,13 +1,13 @@
-import requests
-response = requests.get('https://api.github.com/events')
+# import requests
+# response = requests.get('https://api.github.com/events')
 
-print(response)
-print("\n",response.status_code,"\n")
-if response.status_code == 200:
-    print("success","\n")
-    print(response.headers,"\n")
-    print(response.headers['content-type'])
-    print("\n",response.text)
+# print(response)
+# print("\n",response.status_code,"\n")
+# if response.status_code == 200:
+#     print("success","\n")
+#     print(response.headers,"\n")
+#     print(response.headers['content-type'])
+#     print("\n",response.text)
 
 
 
@@ -126,3 +126,15 @@ if response.status_code == 200:
 # y=1000
 
 # print(x is y)
+
+import pdb
+
+def multiplication(a,b):
+ answer = a*b
+ return answer
+
+pdb.set_trace()
+a = input("enter the number")
+b = input("enter the number")
+result = multiplication(a,b)
+print(result)
